@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import axios from 'axios';
-export default function Form() {
+export default function Form({onSubmit}) {
 	const [username, setUsername] = useState("");
   
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		// let getstring = `http://localhost:8000/anime?username=${username}`;
-		axios.get("http://localhost:8000/")
+		let getURL = `http://localhost:8000/anime?username=${username}`;
+		axios.get(getURL)
 		.then(function (response) {
 		  // handle success
 
-		  console.log("success");
-		  console.log(response);
+			console.log("success");
+			console.log(response["data"]);
+			onSubmit(response["data"]);
 		})
 		.catch(function (error) {
 		  // handle error

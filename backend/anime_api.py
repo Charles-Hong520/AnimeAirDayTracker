@@ -54,4 +54,7 @@ def get_airing(username: str) -> dict:
         if weekday not in json_output.keys():
             json_output[weekday] = []
         json_output[weekday].append(title)
+    for i in range(7):
+        if i not in json_output.keys():
+            json_output[i] = []
     return json_output
