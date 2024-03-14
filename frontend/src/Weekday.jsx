@@ -1,6 +1,8 @@
+import './styles/Weekday.css'
+
 function Weekday({dayName}) {
 	return (
-		<div>
+		<div className='weekday'>
 			{dayName}
 		</div>
 	)

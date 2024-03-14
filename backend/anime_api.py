@@ -16,6 +16,7 @@ CLIENT_ID = os.getenv("CLIENT_ID")
 app = FastAPI()
 origins = [
     "http://localhost",
+    "http://localhost:5173"
 ]
 
 app.add_middleware(

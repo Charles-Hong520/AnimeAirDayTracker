@@ -1,8 +1,8 @@
 import Weekday from "./Weekday";
-
+import './styles/Week.css'
 function Week() {
 	return (
-		<div>
+		<div className="week">
 			<Weekday dayName="Mon"></Weekday>
 			<Weekday dayName="Tue"></Weekday>
 			<Weekday dayName="Wed"></Weekday>

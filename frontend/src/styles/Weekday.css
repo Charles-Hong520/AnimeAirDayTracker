@@ -1,0 +1,9 @@
+.weekday {
+	background-color: gray;
+	padding: 10px;
+	border-width: 10px;
+	border-color: red;
+	border-style: solid;
+	width: 100%;
+	text-align: center;
+}

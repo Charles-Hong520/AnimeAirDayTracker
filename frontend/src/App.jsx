@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import ReactDOM from 'react-dom/client';
 import Week from './Week.jsx'
+import Form from './Form.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,8 +29,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to l earn more
       </p> */}
- 
-      <Week>hte</Week>
+      <Form/>
+      <Week/>
     </>
   )
 }
