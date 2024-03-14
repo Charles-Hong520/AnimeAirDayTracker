@@ -1,4 +1,4 @@
-import requests,datetime,calendar
+import requests,datetime,calendar,argparse
 CLIENT_ID = "e35f268cb013b3bafac987ca19a81b58"
 
 # season = "Winter"
@@ -8,8 +8,12 @@ CLIENT_ID = "e35f268cb013b3bafac987ca19a81b58"
 def getAnimeDetailsURL(id):
 	return f'https://api.myanimelist.net/v1/anime/{id}?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_episodes,start_season,broadcast,source,average_episode_duration,rating,pictures,background,related_anime,related_manga,recommendations,studios,statistics'
 
+parser = argparse.ArgumentParser(description="prints username's currently watching anime.")
+parser.add_argument('username', help='The username argument')
+args = parser.parse_args()
 
-username = "basketbals" # ENTER USERNAME HERE
+
+username = args.username
 user_watching_url = f'https://api.myanimelist.net/v2/users/{username}/animelist?status=watching&limit=15&nsfw=true'
 response = requests.get(user_watching_url, headers = {'X-MAL-CLIENT-ID': CLIENT_ID})
 jsonobject = response.json()
