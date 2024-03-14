@@ -1,5 +1,10 @@
-import requests,datetime,calendar,argparse
-CLIENT_ID = "e35f268cb013b3bafac987ca19a81b58"
+import requests,datetime,calendar,argparse,os
+from dotenv import load_dotenv
+
+load_dotenv()
+CLIENT_ID = os.getenv('CLIENT_ID')
+
+
 
 # season = "Winter"
 # year = 2024 
