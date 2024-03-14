@@ -17,7 +17,8 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:5173",
-    "http://localhost:4173"
+    "http://localhost:4173",
+    "https://charles-hong520.github.io/AnimeAirDayTracker/"
 ]
 
 app.add_middleware(
@@ -32,7 +33,7 @@ app.add_middleware(
 def read_root():
     return {"Hello": "World"}
 
-@app.get("/anime")
+@app.get("/AnimeAirDayTracker")
 def get_airing(username: str) -> dict:
     user_watching_url = getAnimeList(username)
     anime_dict = requests.get(user_watching_url, headers = {'X-MAL-CLIENT-ID': CLIENT_ID}).json()
