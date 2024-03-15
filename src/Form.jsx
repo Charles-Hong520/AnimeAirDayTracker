@@ -28,7 +28,7 @@ export default function Form({onSubmit}) {
   
 	return (
 	  <form onSubmit={handleSubmit}>
-		<label>Enter your name:
+		<label>Enter your MyAnimeList username:
 		  <input 
 			type="text" 
 			value={username}
