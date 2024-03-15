@@ -1,0 +1,15 @@
+form {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+}
+
+form > * {
+	margin: 5px;
+}
+
+.loading {
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-align: center;
+}

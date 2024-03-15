@@ -1,12 +1,35 @@
 .weekday {
-	background-color: gray;
+	background-color: beige;
 	padding: 10px;
-	border-width: 10px;
-	border-color: red;
+	border-width: 4px;
+	border-color: darkblue;
 	border-style: solid;
+	margin: 0 10px;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	
+	border-radius: 10px;
+}
+
+
+ol {
+	display: flex;
+	flex-direction: column;
+	justify-content:  center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+li {
+	list-style-type: none;
+	border-color: blueviolet;
+	border-width: 1px;
+	border-radius: 4px;
+	border-style: solid;
+	margin: 10px 0;
+	padding: 2px 0;
+	width: 100%;
 }
