@@ -18,6 +18,7 @@ origins = [
     "http://localhost",
     "http://localhost:5173",
     "http://localhost:4173",
+    "https://charles-hong520.github.io",
     "https://charles-hong520.github.io/",
     "https://charles-hong520.github.io/AnimeAirDayTracker/"
 ]
