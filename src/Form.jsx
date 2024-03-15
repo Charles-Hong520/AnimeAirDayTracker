@@ -5,7 +5,7 @@ export default function Form({onSubmit}) {
   
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		let getURL = `http://18.222.13.55/AnimeAirDayTracker?username=${username}`;
+		let getURL = `https://chuckchuck.duckdns.org/AnimeAirDayTracker?username=${username}`;
 		axios.get(getURL)
 		.then(function (response) {
 		  // handle success
