@@ -8,6 +8,7 @@ export default function Form({onSubmit}) {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		let getURL = `https://chuckchuck.duckdns.org/AnimeAirDayTracker?username=${username}`;
+		// let getURL = `http://localhost:8000/AnimeAirDayTracker?username=${username}`;
 		setIsLoading(true);
 		axios.get(getURL)
 		.then(function (response) {
